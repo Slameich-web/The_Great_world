@@ -1,0 +1,12 @@
+.navbar {
+  margin: auto;
+}
+.link {
+  padding: 12px 25px;
+  font-size: 20px;
+  border: 1px solid rgb(253, 195, 36);
+}
+.link:hover {
+  transition: 0.3s;
+  background-color: rgb(251, 237, 214);
+}

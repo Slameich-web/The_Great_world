@@ -1,29 +1,29 @@
 import Link from 'next/link';
-
+import styles from '../styles/navbar.module.css';
 const Navbar = ({ children }: any) => {
   return (
     <>
-      <div>
+      <div className={styles.navbar}>
         <Link href="/news">
-          <a>Новости</a>
+          <a className={styles.link}>Новости</a>
         </Link>
         <Link href="/about">
-          <a>Об игре</a>
+          <a className={styles.link}>Об игре</a>
         </Link>
         <Link href="/media">
-          <a>Медиа</a>
+          <a className={styles.link}>Медиа</a>
         </Link>
         <Link href="/download">
-          <a>Скачать</a>
+          <a className={styles.link}>Скачать</a>
         </Link>
         <Link href="/community">
-          <a>Сообщество</a>
+          <a className={styles.link}>Сообщество</a>
         </Link>
         <Link href="/forum">
-          <a>Форум</a>
+          <a className={styles.link}>Форум</a>
         </Link>
         <Link href="/support">
-          <a>Поддержка</a>
+          <a className={styles.link}>Поддержка</a>
         </Link>
       </div>
       <div>{children}</div>

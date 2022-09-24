@@ -1,0 +1,11 @@
+.error {
+  width: 300px;
+  height: 230px;
+  margin: auto;
+}
+.link {
+  color: rgb(26, 114, 230);
+}
+.text {
+  font-size: 20px;
+}

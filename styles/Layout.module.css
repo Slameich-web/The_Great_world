@@ -2,6 +2,6 @@
   margin: auto;
   width: 1000px;
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 130px 1fr;
   background-color: rgb(255, 250, 234);
 }

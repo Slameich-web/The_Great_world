@@ -1,8 +1,15 @@
+import Head from 'next/head';
+
 const Community = () => {
   return (
-    <div>
-      <h2>Community</h2>
-    </div>
+    <>
+      <Head>
+        <title>Community</title>
+      </Head>
+      <div>
+        <h2>Community</h2>
+      </div>
+    </>
   );
 };
 

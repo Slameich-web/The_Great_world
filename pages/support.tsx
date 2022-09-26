@@ -1,8 +1,15 @@
+import Head from 'next/head';
+
 const Support = () => {
   return (
-    <div>
-      <h2>Support</h2>
-    </div>
+    <>
+      <Head>
+        <title>Support</title>
+      </Head>
+      <div>
+        <h2>Support</h2>
+      </div>
+    </>
   );
 };
 

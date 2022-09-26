@@ -1,8 +1,15 @@
+import Head from 'next/head';
+
 const Download = () => {
   return (
-    <div>
-      <h2>Download</h2>
-    </div>
+    <>
+      <Head>
+        <title>Download</title>
+      </Head>
+      <div>
+        <h2>Download</h2>
+      </div>
+    </>
   );
 };
 

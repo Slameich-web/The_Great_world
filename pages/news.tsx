@@ -1,8 +1,15 @@
+import Head from 'next/head';
+
 const News = () => {
   return (
-    <div>
-      <h2>Новости</h2>
-    </div>
+    <>
+      <Head>
+        <title>News</title>
+      </Head>
+      <div>
+        <h2>Новости</h2>
+      </div>
+    </>
   );
 };
 

@@ -1,8 +1,15 @@
+import Head from 'next/head';
+
 const Media = () => {
   return (
-    <div>
-      <h2>Media</h2>
-    </div>
+    <>
+      <Head>
+        <title>Media</title>
+      </Head>
+      <div>
+        <h2>Media</h2>
+      </div>
+    </>
   );
 };
 

@@ -2,6 +2,25 @@
   margin: auto;
   width: 1000px;
   display: grid;
-  grid-template-rows: 130px 1fr;
+  grid-template-rows: 50px 60px 1fr;
   background-color: rgb(255, 250, 234);
+}
+.registation {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.registation_button {
+  background-color: rgb(144, 160, 245);
+  margin-right: 35px;
+  border: 2px double rgb(253, 195, 36);
+  border-radius: 20px;
+  color: white;
+  font-size: 20px;
+  width: 210px;
+  height: 40px;
+}
+.registation_button:hover {
+  transition: 0.7s;
+  background-color: rgb(84, 111, 245);
 }

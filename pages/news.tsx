@@ -1,5 +1,7 @@
+import { Pagination } from 'antd';
 import Head from 'next/head';
-
+import 'antd/dist/antd.css';
+import { useEffect, useLayoutEffect, useState } from 'react';
 export interface NewsProps {
   news: News[];
 }
@@ -9,7 +11,7 @@ export interface News {
   id: string;
 }
 export const getStaticProps = async () => {
-  const response = await fetch('https://jsonplaceholder.typicode.com/posts');
+  const response = await fetch(`https://jsonplaceholder.typicode.com/posts`);
   const data = await response.json();
   return {
     props: { news: data }
@@ -17,6 +19,10 @@ export const getStaticProps = async () => {
 };
 
 const News = ({ news }: NewsProps) => {
+  const [currentPage, setCurrentPage] = useState(1);
+  const lastPageIndex = currentPage * 10;
+  const firstPageIndex = lastPageIndex - 10;
+  const currentPageView = news.slice(firstPageIndex, lastPageIndex);
   return (
     <>
       <Head>
@@ -26,7 +32,7 @@ const News = ({ news }: NewsProps) => {
       </Head>
       <div>
         <h2>Новости</h2>
-        {news.map((news: News) => {
+        {currentPageView.map((news: News) => {
           return (
             <div key={news.id}>
               <h4>{news.title}</h4>
@@ -37,6 +43,13 @@ const News = ({ news }: NewsProps) => {
           );
         })}
       </div>
+      <Pagination
+        showSizeChanger={false}
+        defaultCurrent={1}
+        onChange={(page) => setCurrentPage(page)}
+        pageSize={10}
+        total={news.length}
+      />
     </>
   );
 };

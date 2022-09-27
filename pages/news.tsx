@@ -1,6 +1,22 @@
 import Head from 'next/head';
 
-const News = () => {
+export interface NewsProps {
+  news: News[];
+}
+export interface News {
+  title: string;
+  body: string;
+  id: string;
+}
+export const getStaticProps = async () => {
+  const response = await fetch('https://jsonplaceholder.typicode.com/posts');
+  const data = await response.json();
+  return {
+    props: { news: data }
+  };
+};
+
+const News = ({ news }: NewsProps) => {
   return (
     <>
       <Head>
@@ -10,6 +26,16 @@ const News = () => {
       </Head>
       <div>
         <h2>Новости</h2>
+        {news.map((news: News) => {
+          return (
+            <div key={news.id}>
+              <h4>{news.title}</h4>
+              <div>
+                <p>{news.body}</p>
+              </div>
+            </div>
+          );
+        })}
       </div>
     </>
   );

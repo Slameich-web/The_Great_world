@@ -6,6 +6,7 @@ const Layout = ({ children }: any) => {
     <div className={styles.global_wrapper}>
       <div className={styles.registation}>
         <button className={styles.registation_button}>Регистрация</button>
+        <button className={styles.download_button}>Скачать игру</button>
       </div>
       <Navbar>{children}</Navbar>
     </div>

@@ -1,7 +1,7 @@
 import { Pagination } from 'antd';
 import Head from 'next/head';
 import 'antd/dist/antd.css';
-import { useEffect, useLayoutEffect, useState } from 'react';
+import { useState } from 'react';
 export interface NewsProps {
   news: News[];
 }

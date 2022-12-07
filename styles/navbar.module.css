@@ -10,3 +10,6 @@
   transition: 0.3s;
   background-color: rgb(251, 237, 214);
 }
+.container {
+  margin: 10px 12px;
+}

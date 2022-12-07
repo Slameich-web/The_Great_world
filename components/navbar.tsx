@@ -26,7 +26,7 @@ const Navbar = ({ children }: any) => {
           <a className={styles.link}>Поддержка</a>
         </Link>
       </div>
-      <div>{children}</div>
+      <div className={styles.container}>{children}</div>
     </>
   );
 };

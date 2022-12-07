@@ -10,6 +10,10 @@ const Media = () => {
       </Head>
       <div>
         <h2>Media</h2>
+        <img src="https://pw.mail.ru/images/download/1024x768_18.jpg" />
+        <img src="https://pw.mail.ru/images/download/1024x768_19.jpg" />
+        <img src="https://pw.mail.ru/images/download/1024x768_16.jpg" />
+        <img src="https://pw.mail.ru/images/download/1024x768_17.jpg" />
       </div>
     </>
   );

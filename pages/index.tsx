@@ -1,7 +1,8 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
-
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import { Carousel } from 'react-responsive-carousel';
 const Home: NextPage = () => {
   return (
     <div className={styles.container}>
@@ -11,7 +12,40 @@ const Home: NextPage = () => {
         <link rel="icon" href="/icon.png" />
       </Head>
 
-      <main className={styles.main}>MAIN</main>
+      <main className={styles.main}>
+        <Carousel showArrows showStatus={false} infiniteLoop autoPlay interval={5000} emulateTouch>
+          <div>
+            <img src="https://pw.mail.ru/images/download/1024x768_17.jpg" alt="image1" />
+          </div>
+          <div>
+            <img src="https://pw.mail.ru/images/download/1024x768_18.jpg" alt="image2" />
+          </div>
+          <div>
+            <img src="https://pw.mail.ru/images/download/1024x768_19.jpg" alt="image3" />
+          </div>
+          <div>
+            <img src="https://pw.mail.ru/images/download/1024x768_15.jpg" alt="image4" />
+          </div>
+          <div>
+            <img src="https://pw.mail.ru/images/download/1024x768_14.jpg" alt="image5" />
+          </div>
+          <div>
+            <img src="https://pw.mail.ru/images/download/1024x768_16.jpg" alt="image6" />
+          </div>
+          <div>
+            <img src="https://pw.mail.ru/images/download/1024x768_13.jpg" alt="image7" />
+          </div>
+          <div>
+            <img src="https://pw.mail.ru/images/download/1024x768_12.jpg" alt="image8" />
+          </div>
+          <div>
+            <img src="https://pw.mail.ru/images/download/1024x768_11.jpg" alt="image9" />
+          </div>
+          <div>
+            <img src="https://pw.mail.ru/images/download/1024x768_10.jpg" alt="image10" />
+          </div>
+        </Carousel>
+      </main>
 
       <footer className={styles.footer}>FOOTER</footer>
     </div>

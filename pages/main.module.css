@@ -1,0 +1,11 @@
+.container {
+  margin: 32px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.pw_mark {
+  width: 400px;
+  font-size: 10px;
+  color: cadetblue;
+}

@@ -11,10 +11,12 @@ const Media = () => {
       </Head>
       <div className={styles.container}>
         <h2>Media</h2>
-        <img className={styles.image} src="https://pw.mail.ru/images/download/1024x768_18.jpg" />
-        <img className={styles.image} src="https://pw.mail.ru/images/download/1024x768_19.jpg" />
-        <img className={styles.image} src="https://pw.mail.ru/images/download/1024x768_16.jpg" />
-        <img className={styles.image} src="https://pw.mail.ru/images/download/1024x768_17.jpg" />
+        <div className={styles.image_container}>
+          <img className={styles.image} src="https://pw.mail.ru/images/download/1024x768_18.jpg" />
+          <img className={styles.image} src="https://pw.mail.ru/images/download/1024x768_19.jpg" />
+          <img className={styles.image} src="https://pw.mail.ru/images/download/1024x768_16.jpg" />
+          <img className={styles.image} src="https://pw.mail.ru/images/download/1024x768_17.jpg" />
+        </div>
       </div>
     </>
   );

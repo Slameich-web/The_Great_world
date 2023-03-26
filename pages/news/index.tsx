@@ -2,6 +2,9 @@ import { Pagination } from 'antd';
 import Head from 'next/head';
 import 'antd/dist/antd.css';
 import { useState } from 'react';
+import styles from '../../styles/news.module.css';
+import Link from 'next/link';
+
 export interface NewsProps {
   news: News[];
 }
@@ -13,6 +16,7 @@ export interface News {
 export const getStaticProps = async () => {
   const response = await fetch(`https://jsonplaceholder.typicode.com/posts`);
   const data = await response.json();
+  console.log(data);
   return {
     props: { news: data }
   };
@@ -34,10 +38,18 @@ const News = ({ news }: NewsProps) => {
         <h2>Новости</h2>
         {currentPageView.map((news: News) => {
           return (
-            <div key={news.id}>
-              <h4>{news.title}</h4>
+            <div className={styles.container} key={news.id}>
+              <h3>{news.title}</h3>
               <div>
                 <p>{news.body}</p>
+              </div>
+              <div className={styles.actions}>
+                <div>
+                  <Link href="/">Обсудить</Link>
+                </div>
+                <div className={styles.more_info}>
+                  <Link href="/">Подробнее</Link>
+                </div>
               </div>
             </div>
           );

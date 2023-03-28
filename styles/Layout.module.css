@@ -77,3 +77,20 @@
   font-weight: bold;
   border: none;
 }
+.global {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+.news {
+  display: flex;
+  align-items: flex-end;
+  margin-left: 38px;
+}
+.logo {
+  border-radius: 100px;
+  max-width: 300px;
+}
+.logo_container {
+  display: flex;
+  justify-content: center;
+}

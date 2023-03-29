@@ -1,15 +1,14 @@
 import Navbar from './navbar';
 import styles from '../styles/Layout.module.css';
 import Link from 'next/link';
+import { Button } from './Button';
 
 const Layout = ({ children }: any) => {
   return (
     <div className={styles.global_wrapper}>
       <div className={styles.global}>
         <div className={styles.news}>
-          <button className={styles.download_button}>
-            <span>Активности</span>
-          </button>
+          <Button text="Активности" />
         </div>
         <div className={styles.logo_container}>
           <Link href="/">
@@ -19,12 +18,8 @@ const Layout = ({ children }: any) => {
           </Link>
         </div>
         <div className={styles.registation}>
-          <button className={styles.registation_button}>
-            <span>Регистрация</span>
-          </button>
-          <button className={styles.download_button}>
-            <span>Скачать игру</span>
-          </button>
+          <Button variant="registation_button" text="Регистрация" />
+          <Button variant="download_button" text="Скачать игру" />
         </div>
       </div>
       <Navbar>{children}</Navbar>

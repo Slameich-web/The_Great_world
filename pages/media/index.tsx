@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import styles from '../../styles/media.module.css';
+import styles from './media.module.css';
 
 const Media = () => {
   return (

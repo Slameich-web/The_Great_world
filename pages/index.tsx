@@ -46,8 +46,6 @@ const Home: NextPage = () => {
           </div>
         </Carousel>
       </main>
-
-      <footer className={styles.footer}>FOOTER</footer>
     </div>
   );
 };

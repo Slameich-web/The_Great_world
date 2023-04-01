@@ -2,7 +2,7 @@ import { Pagination } from 'antd';
 import Head from 'next/head';
 import 'antd/dist/antd.css';
 import { useState } from 'react';
-import styles from '../../styles/news.module.css';
+import styles from './news.module.css';
 import Link from 'next/link';
 
 export interface NewsProps {
@@ -16,7 +16,6 @@ export interface News {
 export const getStaticProps = async () => {
   const response = await fetch(`https://jsonplaceholder.typicode.com/posts`);
   const data = await response.json();
-  console.log(data);
   return {
     props: { news: data }
   };

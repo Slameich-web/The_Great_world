@@ -1,5 +1,6 @@
 import Head from 'next/head';
-import styles from '../../styles/download.module.css';
+import { Button } from '../../components/Button';
+import styles from './download.module.css';
 
 const Download = () => {
   return (
@@ -10,7 +11,7 @@ const Download = () => {
         <link rel="icon" href="/icon.png" />
       </Head>
       <div className={styles.container}>
-        <button className={styles.download_button}>Скачать игру</button>
+        <Button variant="download_button" text="Скачать игру" />
       </div>
     </>
   );

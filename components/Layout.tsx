@@ -1,9 +1,14 @@
-import Navbar from './navbar';
-import styles from '../styles/Layout.module.css';
+import Navbar from './Navbar';
+import styles from './Layout.module.css';
 import Link from 'next/link';
 import { Button } from './Button';
+import { ReactNode } from 'react';
 
-const Layout = ({ children }: any) => {
+interface LayoutProps {
+  children: ReactNode;
+}
+
+const Layout = ({ children }: LayoutProps) => {
   return (
     <div className={styles.global_wrapper}>
       <div className={styles.global}>

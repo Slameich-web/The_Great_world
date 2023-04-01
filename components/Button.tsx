@@ -1,4 +1,4 @@
-import styles from './styles.module.css';
+import styles from './Button.module.css';
 
 type Variant = 'download_button' | 'registation_button';
 

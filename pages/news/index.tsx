@@ -4,15 +4,9 @@ import 'antd/dist/antd.css';
 import { useState } from 'react';
 import styles from './news.module.css';
 import Link from 'next/link';
+import { NewsProps, News } from './types';
+import { NewsContainer } from './NewsContainer';
 
-export interface NewsProps {
-  news: News[];
-}
-export interface News {
-  title: string;
-  body: string;
-  id: string;
-}
 export const getStaticProps = async () => {
   const response = await fetch(`https://jsonplaceholder.typicode.com/posts`);
   const data = await response.json();
@@ -35,23 +29,8 @@ const News = ({ news }: NewsProps) => {
       </Head>
       <div>
         <h2>Новости</h2>
-        {currentPageView.map((news: News) => {
-          return (
-            <div className={styles.container} key={news.id}>
-              <h3>{news.title}</h3>
-              <div>
-                <p>{news.body}</p>
-              </div>
-              <div className={styles.actions}>
-                <div>
-                  <Link href="/">Обсудить</Link>
-                </div>
-                <div className={styles.more_info}>
-                  <Link href="/">Подробнее</Link>
-                </div>
-              </div>
-            </div>
-          );
+        {currentPageView.map(({ title, id, body }: News) => {
+          return <NewsContainer title={title} body={body} id={id} />;
         })}
       </div>
       <Pagination
